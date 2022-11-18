@@ -130,4 +130,14 @@ int build_history_list(info_t *info, char *buf, int linecount)
  * Return: the new histcount
  */
 int renumber_history(info_t *info)
+{
+	list_t *node = info->history;
+	int i = 0;
 
+	while (node)
+	{
+		node->num = i++;
+		node = node->next;
+	}
+	return (info->histcount = i);
+}

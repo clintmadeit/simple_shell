@@ -109,7 +109,7 @@ list_t *node_starts_with(list_t *node, char *prefix, char c)
  */
 ssize_t get_node_index(list_t *head, list_t *node)
 {
-OBOBOB	size_t i = 0;
+	size_t i = 0;
 
 	while (head)
 	{
